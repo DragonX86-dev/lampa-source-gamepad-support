@@ -121,6 +121,7 @@ import ServiceRemoteFavorites from './services/remote_favorites'
 import ServiceDMCA from './services/dmca'
 import ServiceFPS from './services/fps'
 import ServiceEvents from './services/events'
+import Gamepad from "./core/gamepad";
 
 window.screen_width  = window.innerWidth
 window.screen_height = window.innerHeight
@@ -280,6 +281,7 @@ function initClass(){
         Controller,
         Activity,
         Keypad,
+        Gamepad,
         Template,
         Component,
         Reguest,
@@ -391,6 +393,10 @@ function prepareApp(){
     Keypad.init()
 
     LoadingProgress.status('Keypad init')
+
+    Gamepad.init()
+
+    LoadingProgress.status('Gamepad init')
 
     Layer.init()
 
